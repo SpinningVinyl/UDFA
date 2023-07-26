@@ -35,7 +35,7 @@ Line beginning with `S:` (uppercase S followed by a colon) determines the initia
 S:q0
 ```
 
-Line beginning with `A:` (uppercase A followed by a colon) lists the acceptance states of the DFA. The initial state should be already defined in the `Q:` line:
+Line beginning with `A:` (uppercase A followed by a colon) lists the acceptance states of the DFA. The acceptance states should be already defined in the `Q:` line:
 
 ```
 A:q2,q3
