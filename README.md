@@ -1,6 +1,6 @@
 # UDFA — Universal DFA runner
 
-This simple Java application is intended for running deterministic finite-state automatons.
+This simple Java application is intended for running deterministic finite automata (DFAs).
 
 To run the application:
 
@@ -59,7 +59,7 @@ q0,d->q2
 
 ## Example
 
-The following DFA operates on the alphabet consisting of symbols `(a,b)` and accepts all strings that contain even number of `a`'s and `b`'s (e.g. `aabb`, `bbaa`, `abba`, `baaabbba` etc.):
+The following DFA operates on the alphabet consisting of symbols `(a,b)` and accepts all words that contain even number of `a`'s and `b`'s (e.g. `aabb`, `bbaa`, `abba`, `baaabbba` etc.):
 
 ![State diagram](DFA.png)
 
