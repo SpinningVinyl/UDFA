@@ -1,6 +1,6 @@
 # UDFA — Universal DFA runner
 
-This simple Java application is intended for running deterministic finite automata (DFAs).
+This simple Java application is intended for running deterministic finite automata (DFAs). See also [NFA runner](https://github.com/SpinningVinyl/NFA-runner).
 
 To run the application:
 
