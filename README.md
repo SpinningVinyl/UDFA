@@ -57,6 +57,10 @@ Transitions are defined in the following way: `old_state,symbol->new_state`, e.g
 q0,d->q2
 ```
 
+Needless to say, all states and symbols should already be defined in the `Q:` and `L:` lines.
+
+The parser also checks the DFA's transition function for completeness; that is, every state should have a defined transition for every symbol in the alphabet.
+
 ## Example
 
 The following DFA operates on the alphabet consisting of symbols `(a,b)` and accepts all words that contain even number of `a`'s and `b`'s (e.g. `aabb`, `bbaa`, `abba`, `baaabbba` etc.):
