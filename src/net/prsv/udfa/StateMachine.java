@@ -23,27 +23,35 @@ public class StateMachine {
         this.startState = startState;
     }
 
-    public void printConfig() {
-        System.out.println("===== DFA configuration =====");
-        System.out.print("States: ");
-        states.forEach(state -> System.out.print(state + " "));
-        System.out.println("\nStart state: " + startState);
-        System.out.print("Accept states: ");
-        acceptStates.forEach(state -> System.out.print(state + " "));
-        System.out.print("\nAlphabet: ");
-        alphabet.forEach(symbol -> System.out.print(symbol + " "));
-        System.out.println("\nTransitions: ");
-        transitions.keySet().forEach(key -> System.out.println("(" + key + ") -> " + transitions.get(key)));
+    public String config() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("===== DFA configuration =====\n");
+        sb.append("States: ");
+        states.forEach(state -> sb.append(state).append(" "));
+        sb.append("\nStart state: ").append(startState).append("\n");
+        sb.append("Accept states: ");
+        acceptStates.forEach(state -> sb.append(state).append(" "));
+        sb.append("\nAlphabet: ");
+        alphabet.forEach(symbol -> sb.append(symbol).append(" "));
+        sb.append("\nTransitions: \n");
+        transitions.keySet().forEach(key -> sb.append("(").append(key).append(") -> ").append(transitions.get(key)).append("\n"));
+        return sb.toString();
     }
 
-    public void printSummary() {
-        System.out.println("===== DFA summary =====");
-        System.out.println("States: " + states.size() + ", accept states: " +
-                acceptStates.size() + ", transitions: " +
-                transitions.size());
-        System.out.print("Alphabet: ");
-        alphabet.forEach(symbol -> System.out.print(symbol + " "));
-        System.out.println();
+    public String summary() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("===== DFA summary =====\n");
+        sb.append("States: ").
+                append(states.size()).
+                append(", accept states: ").
+                append(acceptStates.size()).
+                append(", transitions: ").
+                append(transitions.size()).
+                append("\n");
+        sb.append("Alphabet: ");
+        alphabet.forEach(symbol -> sb.append(symbol).append(" "));
+        sb.append("\n");
+        return sb.toString();
     }
 
     public boolean run(String input) {
